@@ -6,7 +6,7 @@ public class BinaryPlus {
         String result = addingOnlyPositiveNumbers(pk1,pk2);
         result = result.substring(3);
         if(pk1.contains("11,") && pk2.contains("11,")) {
-            System.out.println("Є перенесення зі знаку розряду");
+            System.out.println("Зміна знаку");
             return "00," +  result;
         }
         else{
