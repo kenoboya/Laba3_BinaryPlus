@@ -113,14 +113,15 @@ public class BinaryPlus {
             if(code.charAt(code.length() - 1) == '1') {
                 int index = code.length() - 2;
                 change = "0";
-                while(!change.contains("1") && index >= 0) {
-                    if(code.charAt(index) == '1') {
+                while (!change.contains("1") && index >= 0) {
+                    if (code.charAt(index) == '1') {
                         change = "0" + change;
-                        index--;
                     }
-                    if(index == 0) {
+                    if (index == 0) {
                         change = "10" + change;
+                        break;
                     }
+                    index--;
                 }
                 if(index >= 0)
                 code = code.substring(0,index) + change;
